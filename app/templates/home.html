@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Flashback</title>
+</head>
+<body>
+    <b><h1>NYT Flashbacks</h1></b>
+    <br><br><br>
+    <div class="event">
+        <p>{{curr_event[1]}}</p>
+        <p>{{curr_event[0]}}</p>
+    </div> 
+    <div class="games">
+        <form action = "/" method="POST">
+        <input type="submit" class="guess" name="guess" value="BEFORE">
+        </form>
+        <div class="event">
+            <p>{{next_event[1]}}</p>
+        </div>
+        <form action = "/" method="POST">
+        <input type="submit" class="guess" name="guess" value="AFTER">
+        </form>        
+    </div>
+    <br><br><br>
+    <h3>Score: {{i}}</h3>
+</body>
