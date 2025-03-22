@@ -1,50 +1,84 @@
 * {
-    font-family: "Poppins";
-    font-size:medium
+    font-family: "Poppins", sans-serif;
+    font-size: medium;
 }
 
 html, body {
-    background-color: #E8E8E8;
-    justify-self:center;
+    background-color: #f0f4f8; /* Light and appealing background color */
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: "Lobster", cursive; /* Updated font for the title */
+    font-size: 3rem; /* Increased font size for the title */
+    color: #333; /* Darker color for the title */
+}
+
 .games {
     display: flex;
+    flex-direction: column; /* Changed to column for better responsiveness */
     justify-content: center;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
+
 .event {
-    border: 4px solid black;
+    border: 2px solid black; /* Black border */
     transition: background-color 0.5s ease-out;
     background-color: white;
+    border-radius: 25px; /* Making the box more rounded */
     width: 300px;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    justify-self: center;
     font-size: small;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
 
-
 .guess {
-    background: rgb(240, 255, 243);
-    color:#0096FF;
+    background: #A5D6A7; /* Lighter green background */
+    color: white; /* White text color */
     font-size: 1.5rem;
     border-radius: 1rem;
     border: none;
-    padding-right: 45px;
-    padding-left: 45px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: auto;
+    padding: 10px 45px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 .guess:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
-    cursor: pointer; /* Show pointer cursor on hover */
+    background-color: white; /* White background on hover */
+    color: #A5D6A7; /* Lighter green text color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .games {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 10px; /* Reduce the gap between elements */
+    }
+
+    .guess {
+        width: 100%; /* Ensure buttons take full width on smaller screens */
+        padding: 10px 0; /* Adjust padding for better fit */
+    }
 }
